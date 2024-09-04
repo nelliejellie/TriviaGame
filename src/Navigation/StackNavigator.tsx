@@ -17,6 +17,8 @@ import {
   LeaderIcon,
 } from "@/Assets/Icons";
 import images from "@/Assets/Images/Index";
+import Game from "@/Screens/Game/Game";
+import Score from "@/Screens/Scoreboard/Score";
 
 const Stack = createStackNavigator();
 
@@ -141,6 +143,8 @@ const StackNavigator = () => {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Tabs" component={TabNavigator} />
+        <Stack.Screen name="Game" component={Game} />
+        <Stack.Screen name="Score" component={Score} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -142,5 +142,12 @@ export const styles = StyleSheet.create({
     position: "static",
     borderRadius: 20,
     zIndex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  referContainer: {
+    width: "60%",
+    marginLeft: 10,
   },
 });

@@ -13,7 +13,7 @@ import StackNavigator from "@/Navigation/StackNavigator";
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" />
       <ImageBackground source={images.backGround} style={styles.image}>
         <StackNavigator />
       </ImageBackground>

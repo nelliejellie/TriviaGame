@@ -12,6 +12,7 @@ const images = {
   hanax: require("./Hanax.png"),
   liz: require("./Liz.png"),
   lastContainer: require("./lastContainer.png"),
+  share: require("./share.png"),
 };
 
 export default images;

@@ -4,6 +4,8 @@ import {
   ImageBackground,
   FlatList,
   ScrollView,
+  Image,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { styles } from "./Styles";
@@ -11,7 +13,7 @@ import images from "@/Assets/Images/Index";
 import { ThumbnailIcon, CleanerIcon, PlusIcon, WaveIcon } from "@/Assets/Icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 import QuestionIcon from "@/Assets/Icons/QuestionIcon";
 import ListItem from "@/Components/ListItem";
 
@@ -22,8 +24,8 @@ const Home = () => {
     { id: "3", name: "Hanax" },
     { id: "4", name: "Inioluwa" },
     { id: "5", name: "Liz" },
-    // Add more items as needed
   ];
+  const { navigate } = useNavigation();
   return (
     <ScrollView style={styles.container}>
       <ImageBackground source={images.backGround} style={styles.topBackground}>
@@ -71,7 +73,14 @@ const Home = () => {
           <Text style={styles.textThree}>Next game: Tomorrow, 8PM</Text>
         </View>
         <View style={styles.blueBottom}>
-          <Text style={styles.joinGame}>Join Game</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigate("Game");
+            }}
+          >
+            <Text style={styles.joinGame}>Join Game</Text>
+          </TouchableOpacity>
+
           <Text style={{ color: "white" }}>Entry Fee ₦100</Text>
         </View>
       </View>
@@ -93,7 +102,34 @@ const Home = () => {
         />
       </View>
       <View style={styles.lastContainer}>
-        <Text>Refer and Earn with your friends</Text>
+        <View style={styles.referContainer}>
+          <Text style={{ color: "#fff", fontSize: 14, fontWeight: "500" }}>
+            Refer & Earn with your friends
+          </Text>
+          <Text style={{ color: "#fff", fontSize: 11, marginTop: 10 }}>
+            share with your friends and loved ones to come and play
+          </Text>
+          <View
+            style={{
+              borderWidth: 1,
+              borderColor: "#fff",
+              width: 100,
+              borderRadius: 10,
+              marginTop: 10,
+            }}
+          >
+            <Text
+              style={{
+                color: "#fff",
+                textAlign: "center",
+                padding: 5,
+              }}
+            >
+              Invite Friends
+            </Text>
+          </View>
+        </View>
+        <Image source={images.share} />
       </View>
     </ScrollView>
   );
