@@ -41,12 +41,26 @@ const Answer = ({
         <Text style={{ marginLeft: 20, fontSize: 17 }}>{answerOption}</Text>
       </View>
       {correct === "correct" && (
-        <View style={{ marginLeft: 70 }}>
+        <View
+          style={{
+            justifyContent: "flex-end",
+            flexDirection: "row",
+            flex: 1,
+            marginRight: 30,
+          }}
+        >
           <Ionicons name="checkmark-circle-sharp" size={24} color="#00c449" />
         </View>
       )}
       {correct === "wrong" && (
-        <View style={{ marginLeft: 70 }}>
+        <View
+          style={{
+            justifyContent: "flex-end",
+            flexDirection: "row",
+            flex: 1,
+            marginRight: 30,
+          }}
+        >
           <MaterialIcons name="cancel" size={24} color="#ffcbd2" />
         </View>
       )}

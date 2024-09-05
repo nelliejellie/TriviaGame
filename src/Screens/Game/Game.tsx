@@ -42,7 +42,6 @@ const Game = () => {
         };
       });
       setQuestions(mappedResults);
-      console.log("questionddd", questions);
     } catch (error) {}
   };
 
