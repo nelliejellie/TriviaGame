@@ -8,6 +8,9 @@ import CleanerIcon from "./CleanerIcon";
 import PlusIcon from "./PlusIcon";
 import WaveIcon from "./WaveIcon";
 import JoeIcon from "./JoeIcon";
+import LineIcon from "./LineIcon";
+import HappyIcon from "./HappyIcon";
+import AngryIcon from "./AngryIcon";
 
 export {
   HomeIcon,
@@ -20,4 +23,7 @@ export {
   PlusIcon,
   WaveIcon,
   JoeIcon,
+  LineIcon,
+  HappyIcon,
+  AngryIcon,
 };

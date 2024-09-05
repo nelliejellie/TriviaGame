@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
   },
   counterContainer: {
     flexDirection: "row",

@@ -13,6 +13,7 @@ const images = {
   liz: require("./Liz.png"),
   lastContainer: require("./lastContainer.png"),
   share: require("./share.png"),
+  thumbnail: require("./thumnail.png"),
 };
 
 export default images;

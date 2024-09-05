@@ -30,7 +30,7 @@ const Home = () => {
     <ScrollView style={styles.container}>
       <ImageBackground source={images.backGround} style={styles.topBackground}>
         <View style={styles.firstLayer}>
-          <ThumbnailIcon />
+          <Image source={images.thumbnail} />
           <View style={styles.rightSide}>
             <View style={styles.cleanerContainer}>
               <CleanerIcon />
