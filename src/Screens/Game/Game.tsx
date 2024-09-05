@@ -13,6 +13,7 @@ import Answer from "@/Components/Answer";
 import { shuffleArray } from "@/Utils/Helpers";
 import { UseGetQuestionsHook } from "@/Networking/hooks/useGetQuestionsHook";
 import { useNavigation } from "@react-navigation/native";
+import { TimerIcon } from "@/Assets/Icons";
 
 const Game = () => {
   const [counter, setCounter] = useState<number>(10);
@@ -87,10 +88,30 @@ const Game = () => {
   return (
     <View style={styles.container}>
       <ImageBackground source={images.backGround} style={styles.image}>
-        <View style={styles.counterContainer}>
-          <MaterialCommunityIcons name="timer-outline" size={24} color="#fff" />
-          <Text style={{ color: "#fff" }}>00.00.0{counter}</Text>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            marginTop: 40,
+            width: "60%",
+            justifyContent: "space-between",
+          }}
+        >
+          <View style={styles.counterContainer}>
+            <MaterialCommunityIcons
+              name="timer-outline"
+              size={24}
+              color="#fff"
+            />
+            <Text style={{ color: "#fff" }}>{`00.00.${
+              counter < 10 ? `0${counter}` : counter
+            }`}</Text>
+          </View>
+          <View>
+            <TimerIcon />
+          </View>
         </View>
+
         <View style={styles.questionContainer}>
           <Text style={{ fontWeight: "700", fontSize: 15 }}>
             Question {nextNumberQuestion}

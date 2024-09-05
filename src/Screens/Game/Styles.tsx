@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   counterContainer: {
     flexDirection: "row",
     gap: 10,
-    marginTop: 40,
     alignItems: "center",
   },
   questionContainer: {

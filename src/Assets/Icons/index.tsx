@@ -11,6 +11,7 @@ import JoeIcon from "./JoeIcon";
 import LineIcon from "./LineIcon";
 import HappyIcon from "./HappyIcon";
 import AngryIcon from "./AngryIcon";
+import TimerIcon from "./TimerIcon";
 
 export {
   HomeIcon,
@@ -26,4 +27,5 @@ export {
   LineIcon,
   HappyIcon,
   AngryIcon,
+  TimerIcon,
 };
